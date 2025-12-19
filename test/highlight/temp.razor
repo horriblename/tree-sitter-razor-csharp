@@ -1,0 +1,13 @@
+<h1>Hi</h1>
+
+<p>
+	Hello @name.
+	<!-- <- implicit_expr -->
+
+@for (var i = 0; i < 10; i++) {
+<!-- <- implicit_expr -->
+<!--  ^ variable_declaration -->
+	var thing = new Thing();
+	<text>Name: @thing.Name </text>
+}
+</p>

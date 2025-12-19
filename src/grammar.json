@@ -1,5 +1,6 @@
 {
-  "name": "c_sharp",
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "razor_csharp",
   "word": "_identifier_token",
   "rules": {
     "cshtml": {
@@ -12015,6 +12016,6 @@
     "_expression",
     "_statement",
     "_type"
-  ]
+  ],
+  "reserved": {}
 }
-

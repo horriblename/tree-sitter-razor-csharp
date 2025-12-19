@@ -2035,6 +2035,7 @@
   {
     "type": "cshtml",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -2919,22 +2920,6 @@
     }
   },
   {
-    "type": "extern_alias_directive",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "field_declaration",
     "named": true,
     "fields": {},
@@ -2952,80 +2937,6 @@
         },
         {
           "type": "variable_declaration",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "file_scoped_namespace_declaration",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "alias_qualified_name",
-            "named": true
-          },
-          {
-            "type": "generic_name",
-            "named": true
-          },
-          {
-            "type": "global",
-            "named": true
-          },
-          {
-            "type": "identifier",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "class_declaration",
-          "named": true
-        },
-        {
-          "type": "delegate_declaration",
-          "named": true
-        },
-        {
-          "type": "enum_declaration",
-          "named": true
-        },
-        {
-          "type": "extern_alias_directive",
-          "named": true
-        },
-        {
-          "type": "interface_declaration",
-          "named": true
-        },
-        {
-          "type": "record_declaration",
-          "named": true
-        },
-        {
-          "type": "record_struct_declaration",
-          "named": true
-        },
-        {
-          "type": "struct_declaration",
-          "named": true
-        },
-        {
-          "type": "using_directive",
           "named": true
         }
       ]
@@ -3344,36 +3255,6 @@
     "type": "global",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "global_attribute_list",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "attribute",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "global_statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "_statement",
-          "named": true
-        }
-      ]
-    }
   },
   {
     "type": "goto_statement",
@@ -7927,10 +7808,6 @@
     "named": false
   },
   {
-    "type": "assembly",
-    "named": false
-  },
-  {
     "type": "async",
     "named": false
   },
@@ -7984,7 +7861,8 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "const",
@@ -8123,10 +8001,6 @@
     "named": false
   },
   {
-    "type": "helper",
-    "named": false
-  },
-  {
     "type": "hidden",
     "named": false
   },
@@ -8219,10 +8093,6 @@
     "named": false
   },
   {
-    "type": "module",
-    "named": false
-  },
-  {
     "type": "namespace",
     "named": false
   },
@@ -8236,7 +8106,8 @@
   },
   {
     "type": "notcomment",
-    "named": false
+    "named": false,
+    "extra": true
   },
   {
     "type": "notnull",

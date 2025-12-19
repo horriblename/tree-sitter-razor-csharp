@@ -30,7 +30,7 @@ const decimalDigitSequence = /([0-9][0-9_]*[0-9]|[0-9])/;
 const stringEncoding = /(u|U)8/;
 
 module.exports = grammar({
-  name: 'c_sharp',
+  name: 'razor_csharp',
 
   // TODO: C# comments and preprocessors should not be in html content
   extras: $ => [

@@ -1,0 +1,45 @@
+===
+Simple document
+===
+
+<h1>Hi</h1>
+
+<p>
+	Hello @name.
+
+@for (var i = 0; i < 10; i++) {
+	var thing = new Thing();
+	<text>Name: @thing.Name </text>
+}
+</p>
+
+---
+
+(cshtml
+  (content)
+  (implicit_expr)
+  (content)
+  (for_statement
+    initializer: (variable_declaration
+      type: (implicit_type)
+      (variable_declarator
+        name: (identifier)
+        (equals_value_clause
+          (integer_literal))))
+    condition: (binary_expression
+      left: (identifier)
+      right: (integer_literal))
+    update: (postfix_unary_expression
+      (identifier))
+    body: (block
+      (local_declaration_statement
+        (variable_declaration
+          type: (implicit_type)
+          (variable_declarator
+            name: (identifier)
+            (equals_value_clause
+              (object_creation_expression
+                type: (identifier)
+                arguments: (argument_list))))))
+      (implicit_html)))
+  (content))
